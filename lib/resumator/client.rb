@@ -57,6 +57,10 @@ module Resumator
     def applicant(applicant_id)
       get "applicants/#{applicant_id}"
     end
+    
+    def applicants_by_page(page, options)
+      get("applicants/page/#{page}", options)
+    end
 
     def jobs(options = {})
       get("jobs", options)
