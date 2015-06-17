@@ -57,6 +57,10 @@ module Resumator
     def jobs(options = {})
       get("jobs", options)
     end
+    
+    def job(job_id)
+      get "jobs/#{job_id}"
+    end
 
     def activities(options = {})
       get("activities", options)
