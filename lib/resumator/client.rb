@@ -66,8 +66,25 @@ module Resumator
       get("jobs", options)
     end
     
+    def jobs_by_page(page, options)
+      get("jobs/page/#{page}", options)
+    end
+    
     def job(job_id)
       get "jobs/#{job_id}"
+    end
+    
+    
+    def applicants2jobs(options = {})
+      get("applicants2jobs", options)
+    end
+    
+    def applicants2jobs_by_page(page, options)
+      get("applicants2jobs/page/#{page}", options)
+    end
+    
+    def applicants2jobs(appjob_id)
+      get "applicants2jobs/#{appjob_id}"
     end
 
     def activities(options = {})
